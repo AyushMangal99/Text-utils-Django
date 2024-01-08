@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body style="margin: 0;">
+  <div style="background-color:black;padding: 10px;">
+    <a style="margin-right: 10px;text-decoration: none; color: white; font-size: 1.5rem;" href="/">TestUtils.in</a>
+    <a style="margin-right: 10px;text-decoration: none; color: white;" href="/">Home</a>
+    <a style="margin-right: 10px;text-decoration: none; color: white;" href="/aboutus">AboutUs</a>
+    <a style="margin-right: 10px;text-decoration: none; color: white;" href="/contactUs">Contact Us</a>
+  </div>
+  <div style="background-color:#c3f4c3;padding: 1px;">
+    <p style="color:green; font-weight:700;margin-left: 10px;">Welcome to TextUtils! <span style="font-weight:500;">You
+        can do anything
+        with your text here!</span></p>
+  </div>
+  <div style="display:flex; justify-content: center;">
+    <div style="text-align: left;width: 60%;">
+      <p><strong> Enter your text here and let Text Utils do the magic</strong></p>
+      <form action="/calc" method="post">{% csrf_token %}
+        <textarea name="text1" style="width: 100%; height: 100px;" required></textarea><br>
+        <div style="display: flex; align-items: center;margin-bottom: 1%;"><input type="radio" name="removepunc">Remove Punctuations</div>      
+        <div style="display: flex; align-items: center;margin-bottom: 1%;"><input type="radio" name="uppercase">Uppercase </div>        
+        <div style="display: flex; align-items: center;margin-bottom: 1%;"><input type="radio" name="newlinerem">Remove New Lines</div>      
+        <div style="display: flex; align-items: center;margin-bottom: 1%;"><input type="radio" name="extraSpacerem">Remove Extra Spaces</div>
+        <input type="submit" style="color:white; background-color: blue; padding:1%; border-radius: 10px;">
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>
